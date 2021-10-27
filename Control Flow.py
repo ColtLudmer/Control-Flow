@@ -16,7 +16,6 @@ last_name = input("What is your last name?: ")
 print("\nWelcome to Cash-R-Us",first_name,last_name + ", we will now set up a security PIN on your account.\n")
 
 #Set up a PIN - Personal Identification Number
-
 pin = input("Please choose a 4-digit Personal Identification Number: ")
 
 print("\nThank you",first_name + ", we see that you set your PIN to",pin)
@@ -27,6 +26,19 @@ atm = input("Yes or No?: ").lower()
 
 if atm == "yes":
     print("\n*************************************************************\n")
+
+    #This part of the program will be asking users to complete a transaction through the ATM
+    print("Please insert your ATM card\n")
+    print("Welcome to Cash-R-Us ATM",first_name,last_name,"\n")
+    userPIN = input("What is your 4 digit PIN?: ")
+
+    if userPIN == pin:
+        balance = 674
+        print("\nYour Balance: $" + str(balance))
+
+    else:
+        print("\nSorry",first_name + ", that PIN is incorrect")
+
 
 
 
