@@ -48,10 +48,11 @@ if atm == "yes":
         elif type_of_transaction == "d":
             dAmount = int(input("\nHow much would you like to deposit?: "))
             balance = balance + dAmount
-            print("Your new balance is: $" + str(balance))
-        
-        
-            
+            print("\nYour new balance is: $" + str(balance))
+
+        else:
+            print("Your Balance is: $" + str(balance))
+
     else:
         print("\nSorry", first_name + ", that PIN is incorrect")
 
