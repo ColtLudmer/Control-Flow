@@ -39,9 +39,12 @@ if atm == "yes":
 
         # Ask users what type of transaction they want to make: Withdrawal or Deposit
         type_of_transaction = input("\nWould you like to make a withdrawal, deposit, or check your balance?\nW = Withdrawal, D = Deposit, or B = Balance: ").lower()
-        
+
         if type_of_transaction == "w":
             wAmount = int(input("\nHow much money would you like to withdraw?: "))
+            while balance < wAmount:
+                print("Sorry you don't have that much in your account")
+                wAmount = int(input("\nHow much money would you like to withdraw?: "))
             balance = balance - wAmount
             print("Your new balance is: $" + str(balance))
         
